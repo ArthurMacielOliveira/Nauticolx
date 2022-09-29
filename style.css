@@ -1,194 +1,55 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-:root{
-    --cor-primaria: #009ee0;
-    --cor-secundaria: #0034e0;
-    --cor-fundo-dark: #1b1918;
-    --cor-fundo-dark2: #212121;
-    --fonte-maior: 1.6rem;
-    --fonte-menor: 1.2rem;
+.container{
+display: flex;
+align-items: center;
 }
-
+nav{
+display: flex;
+justify-content:space-evenly;
+position: relative;
+left: 45%;
+}
+header{
+box-shadow: 0 0 1em;
+background-color: white;
+width: 100%;
+}
 body{
-    background-color: var(--cor-fundo-dark2);
-    font-family: 'Titillium Web', sans-serif;
-      
+background-image: url("img/bg.png");
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment: fixed;
 }
-
-.botaodm{
-    margin-left: 1%;
-    background-color: transparent;
-    color: var(--cor-primaria);
-    border: none;
-    padding: 12px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    transition: 200ms ease-in-out;
-}
-
-.botaodm:hover{
-    background-color: rgba(142, 142, 142, 0.499);
-}
-
-.nav{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--cor-fundo-dark);
-    height: 6rem;
-}
-
-.nav-logo{
-    flex: 25%;
-    margin-left: 5%;
-    color: var(--cor-primaria);
-    font-size: var(--fonte-maior);
-}
-
-.nav-search{
-    flex: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.nav-search  input:hover{
-    border-bottom-color: var(--cor-primaria);
-    background-color: rgba(142, 142, 142, 0.499);
-}
-
-.nav-search input:focus{
-    border-bottom-color: #4dc2f5;
-    background-color: rgba(142, 142, 142, 0.499);
-}
-
-.btn-search{
-    background-color: transparent;
-    border: none;
-    color: #3c3b3b;
-    font-size: 1rem;
-    border-radius: 50%;
-    padding: 12px;
-    margin-left: 1%;
-    transition: 200ms ease-in-out;
-}
-
-.btn-search:hover{
-    color: var(--cor-primaria);
-    background-color: rgba(142, 142, 142, 0.499);
-}
-
-.nav-search input{
-    outline: none;
-    background-color: transparent;
-    border: none;
-    border-bottom: 4px solid #3c3b3b;
-    font-size: 1rem;
-    width: 80%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    transition: border-bottom-color 200ms ease-in-out;
-    caret-color: white;
-    font-family: 'Titillium Web', sans-serif;
-    color:white;
-    transition: 250ms ease-in-out;
-}
-.nav-menu{
-    flex:35%;
-    margin-right: 5%;
-    text-align: right;
-}
-
-.nav-menu a{
-    padding: 12px 16px;
-    color: var(--cor-primaria);
-    font-size: var(--fonte-menor);
-    text-decoration: none;
-    position: relative;
-    transition: 250ms ease-in-out;
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
-}
-
-.nav-menu a:hover{
-    background-color: rgba(142, 142, 142, 0.499);
-}
-.nav-menu a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background-color: currentColor;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: right;
-    transform-origin: right;
-    transition: -webkit-transform 250ms ease-in;
-}
-
-.nav-menu a:hover::after{
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transform-origin: left;
-    transform-origin: left;
-}
-
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-}
-
 .card{
-    margin-top:1.5%;
-    display: flex;
-    flex-direction: column;
-    text-align:center;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    border-radius: 50px;
-    width: 400px;   
-    height: 450px;     
-    color: var(--cor-primaria);
-                                                                                
+background-color: white;
+border: solid 1px black;
+padding: 30px;
+width: 25%;
+height: fit-content;
+border-radius: 15px;
+position: relative;
+left: 10%;
 }
-footer{
-    text-align: center;
-    background-color: var(--cor-fundo-dark);
-   position: fixed;
-   bottom:0;    
-   left: 0;
-   right: 0;
-   font-size: var(--fonte-menor);
-   color:var(--cor-primaria);
+.card h1{
+    font-family: 'Chau Philomene One', sans-serif;
 }
-main{
-    text-align:center;
-    align-items: center;
-    justify-content: center;
+.card p{
+    font-family: 'Chau Philomene One', sans-serif;
 }
-.img1{
-border-top-left-radius:50px;
-border-top-right-radius:50px;
+a{
+    font-family: 'Chau Philomene One', sans-serif;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
 }
-.btn{
-    text-align: center;
-     border-radius: 4px;
-     background-color: var(--cor-fundo-dark);
-    color: var(--cor-secundaria);
-    transition: 0.7s;
+a:hover{
+    color: rgb(8, 76, 184);
+    text-decoration: underline;
 }
-:hover.btn{
-    background-color: var(--cor-fundo-dark2);
-    color: var(--cor-primaria);
-    
+.links{
+display: flex;
+align-items: center;
 }
